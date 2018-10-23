@@ -16,7 +16,7 @@ public class MainMenuButtons : MonoBehaviour
         Button btn2 = quitButton.gameObject.GetComponent<Button>();
 
         btn1.onClick.AddListener(GameStart);
-        btn1.onClick.AddListener(GameEnd);
+        btn2.onClick.AddListener(GameEnd);
 	}
 
     void GameStart()

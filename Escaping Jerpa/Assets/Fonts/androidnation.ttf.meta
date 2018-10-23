@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ef5d14da75741da4c9718a1cc700c3e0
+guid: d2e44598f822fc3499ba2c2079ecc3a3
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,8 +11,7 @@ TrueTypeFontImporter:
   fontName: Android Nation
   fontNames:
   - Android Nation
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: d2e44598f822fc3499ba2c2079ecc3a3, type: 3}
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
