@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: a6aa4e11df82f044891df81b0d782de4
+=======
+<<<<<<< HEAD
+guid: a6aa4e11df82f044891df81b0d782de4
+=======
+guid: 2d75ec2b2ec58e940a0cd7cb5602bd0e
+>>>>>>> e713e329be7b29483fe8061900931119ccd42545
+>>>>>>> 5d956b1e56a3d738d2902009a79c83ab0841a58c
 TextureImporter:
   fileIDToRecycleName:
     21300000: copshipv2_0
