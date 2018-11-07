@@ -8,6 +8,7 @@ TagManager:
   - obstacletag
   - bulletcollide
   - PauseMenu
+  - bound
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - NewLayer
   - Play Field
-  - 
+  - bulletlayer
   - 
   - 
   - 
