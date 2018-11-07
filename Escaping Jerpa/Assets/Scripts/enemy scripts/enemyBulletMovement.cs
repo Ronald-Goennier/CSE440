@@ -14,8 +14,8 @@ public class enemyBulletMovement : MonoBehaviour
     void Start()
     {
 
-        // transform.Rotate(new Vector3(0, 0, 180));
-        
+       // transform.Rotate(new Vector3(0, 0, 180));
+
 
         Destroy(gameObject, destroyBulletTime);
     }
