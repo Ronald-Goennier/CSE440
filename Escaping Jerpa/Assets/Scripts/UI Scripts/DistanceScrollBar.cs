@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class DistanceScrollBar : MonoBehaviour
 {
-    public Slider slider;
+    private Slider slider;
     private float slideTime;
 
 	// Use this for initialization
 	void Start ()
     {
-        slider = GetComponent<Slider>();
+        slider = gameObject.GetComponentInChildren<Slider>();
 	}
 	
 	// Update is called once per frame
