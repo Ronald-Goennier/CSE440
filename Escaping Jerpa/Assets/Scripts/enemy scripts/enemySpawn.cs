@@ -8,7 +8,9 @@ public class enemySpawn : MonoBehaviour
 {
 
     public Transform obstaclePoint;
-    public GameObject enemyPrefab;   //enemy object
+    public GameObject enemyCopPrefab;   //enemy cop object
+    public GameObject enemyMobPrefab;   //enemy mob object
+    public GameObject sampWave;
 
     public float spawning_timer;    //timer for when enemy spawns
     public Vector3 random_position;     // random position for where enemy spawns
@@ -20,9 +22,11 @@ public class enemySpawn : MonoBehaviour
 
         if (spawning_timer <= 0)
         {
-            random_position = new Vector3(12, (Random.Range(-7.0f, 5.0f)), 0);  //create vector at random x,y position
-            Instantiate(enemyPrefab, random_position, obstaclePoint.rotation);   //create enemy at specified vector
-            spawning_timer = Random.Range(3f, 6f);  //wait a random amount of time for next obstacle creation
+            random_position = new Vector3(transform.position.x, (Random.Range(-7.0f, 5.0f)), 0);  //create vector at random x,y position
+            Instantiate(enemyCopPrefab, random_position, obstaclePoint.rotation);   //create enemy at specified vector
+            Instantiate(enemyMobPrefab, random_position, obstaclePoint.rotation);   //create enemy at specified vector
+            Instantiate(sampWave, transform.position, obstaclePoint.rotation);
+            spawning_timer = Random.Range(.75f, 4.5f);  //wait a random amount of time for next obstacle creation
         }
     }
 

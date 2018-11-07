@@ -11,20 +11,22 @@ public class enemyMovement1 : MonoBehaviour {
     private float stationaryTime;   //amount of time enemy is stationary after firstmovetime reaches 0
     private float upordown;         //whether enemy moves up or down offscreen 
 
+    [SerializeField]
+    private Animator defcopanim;
+
     // Use this for initialization
     void Start () {
         //set timers
-        firstmovetime = Random.Range(1f, 2.5f);
+        firstmovetime = Random.Range(1f, 1.5f);
         stationaryTime = Random.Range(4f, 6f);
         //set number to see whether enemy moves up or down
         upordown = Random.Range(0f, 2f);
-
     }
-	
-	// Update is called once per frame
-	void Update () {
+    
+    // Update is called once per frame
+    void Update () {
         firstmovetime -= Time.deltaTime;
-       
+        
         //enemy moves while firstmovetime is greater than 0
         if (firstmovetime > 0)
         {           
@@ -42,8 +44,13 @@ public class enemyMovement1 : MonoBehaviour {
                 if (upordown > 1)
                 {
                     awaymovingdown();
+                    defcopanim.SetFloat("MoveOption", upordown);
                 }
-                else awaymovingup();
+                else
+                {
+                    defcopanim.SetFloat("MoveOption", upordown);
+                    awaymovingup();
+                }
             }
         }
 		
@@ -57,7 +64,8 @@ public class enemyMovement1 : MonoBehaviour {
 
     //enemy moves down offscreen
     void awaymovingdown()
-    {         
+    {
+        //defcopanim.SetFloat("MoveOption", upordown);
         transform.position += Vector3.up * movementSpeed * Time.deltaTime;
         transform.position += Vector3.left * movementSpeed * Time.deltaTime;
         Destroy(gameObject, 4f);
@@ -66,6 +74,7 @@ public class enemyMovement1 : MonoBehaviour {
     //enemy moves up offscreen
     void awaymovingup()
     {
+        //defcopanim.SetFloat("MoveOption", upordown);
         transform.position += Vector3.down * movementSpeed * Time.deltaTime;
         transform.position += Vector3.left * movementSpeed * Time.deltaTime;
         Destroy(gameObject, 3f);

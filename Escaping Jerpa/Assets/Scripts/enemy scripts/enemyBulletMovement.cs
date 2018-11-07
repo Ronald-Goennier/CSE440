@@ -9,37 +9,30 @@ public class enemyBulletMovement : MonoBehaviour
     private float speed;
     [SerializeField]
     private float destroyBulletTime;
-   
-
-    public Rigidbody2D rb;
 
     // Use this for initialization
     void Start()
     {
 
-        transform.Rotate(new Vector3(0, 0, 180));
-        rb.velocity = transform.right * speed;
+       // transform.Rotate(new Vector3(0, 0, 180));
+
 
         Destroy(gameObject, destroyBulletTime);
     }
 
     void Update()
     {
-        //Physics2D.IgnoreLayerCollision(1, 10, false);
-        Physics2D.IgnoreLayerCollision(10, 10);
-        //Physics2D.IgnoreLayerCollision(13, 10);
+      
+        Physics2D.IgnoreLayerCollision(10, 10); //ignore any collisions with objects in layer 10 to other objects in layer 10 (bullet layer)
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        
     }
-
-
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.layer == 1 || coll.gameObject.layer == 8)
+        if (coll.gameObject.name == "playershipdef")
         {
             Destroy(gameObject);
         }
     }
-
-
-
 }
