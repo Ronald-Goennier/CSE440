@@ -57,7 +57,8 @@ GameObject:
   - component: {fileID: 114074353471465048}
   - component: {fileID: 95017892854264732}
   - component: {fileID: 114140548333096686}
-  m_Layer: 12
+  - component: {fileID: 114590828125719634}
+  m_Layer: 0
   m_Name: defenemy
   m_TagString: death
   m_Icon: {fileID: 0}
@@ -636,6 +637,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 7
+--- !u!114 &114590828125719634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363032875814152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c48b86677e65c45849b789346f2b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreKeeper: 0
+  textObject: {fileID: 1312875753704254, guid: 5351b1b8859ccca4e8d30e43b7434bfa, type: 2}
 --- !u!114 &114815672332132438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -647,6 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d0bbf8c50c57f4081336d177af2ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scorePoints: 5
 --- !u!212 &212642743436729092
 SpriteRenderer:
   m_ObjectHideFlags: 1

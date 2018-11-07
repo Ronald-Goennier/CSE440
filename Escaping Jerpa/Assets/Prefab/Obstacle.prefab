@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114376471636445096}
   - component: {fileID: 50777019404009846}
   - component: {fileID: 114758256632005744}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Obstacle
   m_TagString: obstacletag
   m_Icon: {fileID: 0}
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d0bbf8c50c57f4081336d177af2ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scorePoints: 0
 --- !u!212 &212382046617784144
 SpriteRenderer:
   m_ObjectHideFlags: 1
