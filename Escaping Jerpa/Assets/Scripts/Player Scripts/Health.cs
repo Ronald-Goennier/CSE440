@@ -21,10 +21,10 @@ public class Health : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-		/*if(currentHealth <= 0)
+		if(currentHealth <= 0)
         {
             OnDeath();
-        }*/
+        }
 	}
 
     void TakeDamage(int dmg)
@@ -35,21 +35,23 @@ public class Health : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        //destroy player if it collides with objects tagged as "death" or  "ostabletag"
+        //check collision for objects that collide with player
         if (coll.gameObject.tag == "death" || coll.gameObject.tag == "obstacletag")
         {
-            //trail.transform.SetParent(null);
-
-            TakeDamage(5);
+            if (coll.gameObject.tag == "obstacletag")   //destroy player regardless of health if collision with obstacle
+            {
+                Destroy(gameObject);
+            }
+            else
+                TakeDamage(5);
         }
     }
 
     void OnDeath()
     {
-        trail.transform.SetParent(null);
-        Destroy(gameObject);
+        trail.transform.SetParent(null); //seperate trail from parent player object
+        Destroy(gameObject); // destroy player
 
         SceneManager.LoadScene("MainMenu");
-
     }
 }

@@ -14,11 +14,12 @@ public class PCmovement : MonoBehaviour
     void FixedUpdate()
     {
         Move();
-        Physics2D.IgnoreLayerCollision(10, 1);  //ignore collision with objects in layers 10 and 1
+        //Physics2D.IgnoreLayerCollision(10, 1);  //ignore collision with objects in layers 10 and 1
     }
 
     void Move()
     {
+        
 
         if (Input.GetKey(KeyCode.W))
         {

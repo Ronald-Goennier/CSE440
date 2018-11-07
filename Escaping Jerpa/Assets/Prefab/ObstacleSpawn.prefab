@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePoint: {fileID: 4060323497700880}
-  enemyPrefab: {fileID: 1363032875814152, guid: d8d8e029b765c1845a2f0960f2ffb557,
+  enemyPrefab: {fileID: 1121783540011570, guid: d8d8e029b765c1845a2f0960f2ffb557,
     type: 2}
   spawning_timer: 0
   random_position: {x: 0, y: 0, z: 0}

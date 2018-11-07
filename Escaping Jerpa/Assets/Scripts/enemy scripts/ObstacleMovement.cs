@@ -14,15 +14,11 @@ public class ObstacleMovement : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
         //Vector3 position = new Vector3(0, (Random.Range(-1.0f, 0.0f)), 0);
 
-
-        transform.Rotate(new Vector3(0, 0, 180));
+        transform.Rotate(new Vector3(180, 0, 180));
         rb.velocity = transform.right * speed;
-
 
         Destroy(gameObject, destroyObstacleTime);
     }
-
 }

@@ -4,13 +4,30 @@ using UnityEngine;
 
 public class DestroyEnemy : MonoBehaviour {
 
+    [SerializeField]
+    private Animator destroyanim;
+
+    void Start()
+    {
+        
+        destroyanim.SetBool("isdestroy", false);
+    }
     void OnCollisionEnter2D(Collision2D coll)
     {
         //destroy enemy if it collides with objects tagged "bulletcollide"
-        if (coll.gameObject.tag == "bulletcollide" & gameObject.tag != "obstacletag")
+        if (coll.gameObject.tag == "bulletcollide")
         {
-            Destroy(gameObject);
+            GetComponent<Collider2D>().enabled = false;
+            destroyanim.SetBool("isdestroy",true);
+            StartCoroutine(time());
         }
     }
 
+    IEnumerator time()
+    {
+        yield return new WaitForSeconds(.50f);
+        Destroy(gameObject);
+
+    }
+    
 }
