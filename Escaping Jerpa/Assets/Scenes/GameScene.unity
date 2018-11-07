@@ -756,7 +756,7 @@ Prefab:
         type: 2}
       propertyPath: enemyCopPrefab
       value: 
-      objectReference: {fileID: 1035216920429534, guid: d8d8e029b765c1845a2f0960f2ffb557,
+      objectReference: {fileID: 1895323736934072, guid: d8d8e029b765c1845a2f0960f2ffb557,
         type: 2}
     - target: {fileID: 114046759950141734, guid: 02c51f34e4c889c40a686f9567cddff8,
         type: 2}
@@ -1809,7 +1809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1545565929}
-  bulletPrefab: {fileID: 1857438605358980, guid: db60bb51212185743ab2f7d2c324944c,
+  bulletPrefab: {fileID: 1202118285814876, guid: db60bb51212185743ab2f7d2c324944c,
     type: 2}
 --- !u!114 &1364879104
 MonoBehaviour:
@@ -1900,7 +1900,7 @@ SpriteRenderer:
   m_SortingLayerID: -1121241195
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1bee4406d40fb5145816979f66201d99, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a66d65e177cbae4d9a2622caf3c79bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1919,7 +1919,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1364879101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.555, y: -1.005, z: -3}
+  m_LocalPosition: {x: -8.421, y: -0.72, z: -3}
   m_LocalScale: {x: 1.029043, y: 1.029043, z: 1.029043}
   m_Children:
   - {fileID: 1545565929}
