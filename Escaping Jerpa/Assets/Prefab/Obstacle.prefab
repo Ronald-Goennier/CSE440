@@ -18,15 +18,6 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4636887704572566}
-  - component: {fileID: 212382046617784144}
-  - component: {fileID: 61023161871737526}
-  - component: {fileID: 114376471636445096}
-  - component: {fileID: 50777019404009846}
-  - component: {fileID: 114758256632005744}
-  m_Layer: 0
-=======
   - component: {fileID: 4563319272540838}
   - component: {fileID: 212829098627053800}
   - component: {fileID: 61436493145138138}
@@ -35,7 +26,6 @@ GameObject:
   - component: {fileID: 114433717411789098}
   - component: {fileID: 95831782328000292}
   m_Layer: 9
->>>>>>> origin/MyBranchA
   m_Name: Obstacle
   m_TagString: obstacletag
   m_Icon: {fileID: 0}
@@ -143,13 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d0bbf8c50c57f4081336d177af2ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  scorePoints: 0
---- !u!212 &212382046617784144
-=======
   destroyanim: {fileID: 0}
 --- !u!212 &212829098627053800
->>>>>>> origin/MyBranchA
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

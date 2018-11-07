@@ -55,25 +55,11 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 4676824441478344}
-  - component: {fileID: 212642743436729092}
-  - component: {fileID: 61466676134442568}
-  - component: {fileID: 114815672332132438}
-  - component: {fileID: 114074353471465048}
-  - component: {fileID: 95017892854264732}
-  - component: {fileID: 114140548333096686}
-  - component: {fileID: 114590828125719634}
-  m_Layer: 0
-  m_Name: defenemy
-  m_TagString: death
-=======
   - component: {fileID: 4291805679945166}
   - component: {fileID: 96783739248640920}
   m_Layer: 0
   m_Name: trailredu
   m_TagString: Untagged
->>>>>>> origin/MyBranchA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -647,29 +633,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a798077c5ef5534ea9f78815596a091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  movementSpeed: 7
---- !u!114 &114590828125719634
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1363032875814152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9c48b86677e65c45849b789346f2b7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreKeeper: 0
-  textObject: {fileID: 1312875753704254, guid: 5351b1b8859ccca4e8d30e43b7434bfa, type: 2}
---- !u!114 &114815672332132438
-=======
   enemyFirepoint: {fileID: 4037038401158738}
   enemyBulletPrefab: {fileID: 1460784874583584, guid: 4801ef3f30cbd964aac4725a09fdac54,
     type: 2}
   enemyShootingRate: 1
 --- !u!114 &114856948753925332
->>>>>>> origin/MyBranchA
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -680,13 +648,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d0bbf8c50c57f4081336d177af2ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  scorePoints: 5
---- !u!212 &212642743436729092
-=======
   destroyanim: {fileID: 95171114605435140}
 --- !u!212 &212151684315756576
->>>>>>> origin/MyBranchA
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

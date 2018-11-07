@@ -22,12 +22,7 @@ GameObject:
   - component: {fileID: 212497566751102198}
   - component: {fileID: 61098136997239544}
   - component: {fileID: 114154073886447418}
-<<<<<<< HEAD
-  - component: {fileID: 50962909002501494}
-  m_Layer: 0
-=======
   m_Layer: 10
->>>>>>> origin/MyBranchA
   m_Name: EnemyBullet
   m_TagString: death
   m_Icon: {fileID: 0}

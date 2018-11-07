@@ -254,8 +254,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trail: {fileID: 1099555556071940}
-  healthSlider: {fileID: 0}
-  maxHealth: 0
 --- !u!114 &114532775856933638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  bullet: {fileID: 1655585831684856, guid: db60bb51212185743ab2f7d2c324944c, type: 2}
 --- !u!114 &114562335175665566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -280,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 4356136754016814}
-  bulletPrefab: {fileID: 1857438605358980, guid: db60bb51212185743ab2f7d2c324944c,
+  bulletPrefab: {fileID: 1655585831684856, guid: db60bb51212185743ab2f7d2c324944c,
     type: 2}
 --- !u!212 &212758480984472342
 SpriteRenderer:
@@ -315,7 +314,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1121241195
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ca41b057812612d4eb5994ce26b43743, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
