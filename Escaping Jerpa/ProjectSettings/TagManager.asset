@@ -9,6 +9,7 @@ TagManager:
   - bulletcollide
   - PauseMenu
   - bound
+  - medkit
   layers:
   - Default
   - TransparentFX

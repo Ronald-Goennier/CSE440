@@ -33,6 +33,12 @@ public class Health : MonoBehaviour
         healthSlider.value = currentHealth;
     }
 
+    void GiveHealth(int health)
+    {
+        currentHealth += health;
+        healthSlider.value = currentHealth;
+    }
+
     void OnCollisionEnter2D(Collision2D coll)
     {
         //check collision for objects that collide with player
@@ -44,6 +50,13 @@ public class Health : MonoBehaviour
             }
             else
                 TakeDamage(5);
+        }
+
+        //collision check for medkits
+        if (coll.gameObject.tag == "medkit")
+        {
+            Destroy(coll.gameObject);
+            GiveHealth(5);
         }
     }
 
