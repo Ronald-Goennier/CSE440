@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyFirepoint: {fileID: 4037038401158738}
-  enemyBulletPrefab: {fileID: 1460784874583584, guid: 4801ef3f30cbd964aac4725a09fdac54,
+  enemyBulletPrefab: {fileID: 1292068048926776, guid: e111261b0936c8b418c2fab2f65c1d8e,
     type: 2}
   enemyShootingRate: 1
 --- !u!114 &114856948753925332
@@ -649,6 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyanim: {fileID: 95171114605435140}
+  scorePoints: 5
 --- !u!212 &212151684315756576
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -692,6 +693,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

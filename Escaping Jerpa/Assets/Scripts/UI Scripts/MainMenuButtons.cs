@@ -12,12 +12,15 @@ public class MainMenuButtons : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        //controlsMenu = GameObject.FindGameObjectWithTag("Controls");
+
         Button btn1 = startButton.gameObject.GetComponent<Button>();
         Button btn2 = quitButton.gameObject.GetComponent<Button>();
 
         btn1.onClick.AddListener(GameStart);
         btn2.onClick.AddListener(GameEnd);
-	}
+
+    }
 
     void GameStart()
     {

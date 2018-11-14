@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 61628095370030602}
   m_Layer: 8
   m_Name: Front Bound
-  m_TagString: Untagged
+  m_TagString: bound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

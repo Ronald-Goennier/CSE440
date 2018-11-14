@@ -6,17 +6,30 @@ public class DestroyEnemy : MonoBehaviour {
 
     [SerializeField]
     private Animator destroyanim;
+    public int scorePoints;
+
+    private ScoreScript scoreController;
 
     void Start()
-    {
-        
+    {   
         destroyanim.SetBool("isdestroy", false);
+        GameObject scoreControllerObject = GameObject.FindGameObjectWithTag("ScoreController");
+        if(scoreControllerObject)
+        {
+            scoreController = scoreControllerObject.GetComponent<ScoreScript>();
+        }
+        if(!scoreControllerObject)
+        {
+            Debug.Log("No score script found");
+        }
+        
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
         //destroy enemy if it collides with objects tagged "bulletcollide"
         if (coll.gameObject.tag == "bulletcollide")
         {
+            scoreController.AddScore(scorePoints);
             GetComponent<Collider2D>().enabled = false;
             destroyanim.SetBool("isdestroy",true);
             StartCoroutine(time());
@@ -27,7 +40,6 @@ public class DestroyEnemy : MonoBehaviour {
     {
         yield return new WaitForSeconds(.50f);
         Destroy(gameObject);
-
     }
     
 }
