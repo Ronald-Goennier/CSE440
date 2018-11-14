@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyFirepoint: {fileID: 4037038401158738}
-  enemyBulletPrefab: {fileID: 1460784874583584, guid: 4801ef3f30cbd964aac4725a09fdac54,
+  enemyBulletPrefab: {fileID: 1292068048926776, guid: e111261b0936c8b418c2fab2f65c1d8e,
     type: 2}
   enemyShootingRate: 1
 --- !u!114 &114856948753925332

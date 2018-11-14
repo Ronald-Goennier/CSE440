@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 114431958941481820}
   - component: {fileID: 95736139923399136}
   - component: {fileID: 114374658191493336}
+  - component: {fileID: 114973346558419664}
   m_Layer: 0
   m_Name: defmobenemyv2
   m_TagString: Untagged
@@ -273,7 +274,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1677809877629180}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a798077c5ef5534ea9f78815596a091, type: 3}
   m_Name: 
@@ -295,6 +296,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 3
   targetPlayer: {fileID: 0}
+--- !u!114 &114973346558419664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1677809877629180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92e5683c00407c4f9339863e345ac1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyFirepoint: {fileID: 4953656588841486}
+  enemyBulletPrefab: {fileID: 1460784874583584, guid: 4801ef3f30cbd964aac4725a09fdac54,
+    type: 2}
+  enemyShootingRate: 1
 --- !u!212 &212028023967263180
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -10,7 +10,10 @@ public class Health : MonoBehaviour
     public int maxHealth;
     private int currentHealth;
     public GameObject trail;
+    [SerializeField]
+    private float time;
 
+    private bool stunned;
     private GameOverScript gameOver;
 
 	// Use this for initialization
@@ -18,6 +21,7 @@ public class Health : MonoBehaviour
     {
         healthSlider.value = maxHealth;
         currentHealth = maxHealth;
+        stunned = false;
 
         GameObject gameOverObject = GameObject.FindGameObjectWithTag("GameOverMenu");
         if(gameOverObject)
@@ -37,7 +41,18 @@ public class Health : MonoBehaviour
         {
             OnDeath();
         }
-	}
+
+        if (stunned)
+        {
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                GetComponent<PCmovement>().enabled = true;
+                time = 3;
+            }
+
+        }
+    }
 
     void TakeDamage(int dmg)
     {
@@ -48,7 +63,7 @@ public class Health : MonoBehaviour
     void OnCollisionEnter2D(Collision2D coll)
     {
         //check collision for objects that collide with player
-        if (coll.gameObject.tag == "death" || coll.gameObject.tag == "obstacletag" || coll.gameObject.tag == "damage")
+        if (coll.gameObject.tag == "death" || coll.gameObject.tag == "obstacletag" || coll.gameObject.tag == "damage" || coll.gameObject.tag == "stun")
         {
             if (coll.gameObject.tag == "obstacletag")   //destroy player regardless of health if collision with obstacle
             {
@@ -62,6 +77,11 @@ public class Health : MonoBehaviour
             else if(coll.gameObject.tag == "damage")
             {
                 TakeDamage(5);
+            }
+            else if (coll.gameObject.tag == "stun")
+            {
+                GetComponent<PCmovement>().enabled = false;
+                stunned = true;
             }
         }
     }
