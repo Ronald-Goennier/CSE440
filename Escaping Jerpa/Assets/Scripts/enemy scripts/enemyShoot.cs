@@ -12,7 +12,7 @@ public class enemyShoot : MonoBehaviour {
     private GameObject enemyBulletPrefab;   //enemy bullet object
     [SerializeField]
     private float enemyShootingRate;    //rate at which enemy fires bullets
-    
+
 	// Update is called once per frame
 	void Update () {
         

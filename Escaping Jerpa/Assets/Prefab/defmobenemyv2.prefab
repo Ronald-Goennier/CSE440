@@ -253,6 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyanim: {fileID: 95736139923399136}
+  scorePoints: 10
 --- !u!114 &114374658191493336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyanim: {fileID: 95736139923399136}
+  scorePoints: 10
 --- !u!114 &114431958941481820
 MonoBehaviour:
   m_ObjectHideFlags: 1

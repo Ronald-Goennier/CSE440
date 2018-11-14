@@ -11,7 +11,8 @@ public class bulletMovement : MonoBehaviour {
     private float destroyBulletTime;
    
 	// Use this for initialization
-	void Start () {     
+	void Start ()
+    {     
         Destroy(gameObject, destroyBulletTime);
     }
 

@@ -11,11 +11,23 @@ public class Health : MonoBehaviour
     private int currentHealth;
     public GameObject trail;
 
+    private GameOverScript gameOver;
+
 	// Use this for initialization
 	void Start ()
     {
         healthSlider.value = maxHealth;
         currentHealth = maxHealth;
+
+        GameObject gameOverObject = GameObject.FindGameObjectWithTag("GameOverMenu");
+        if(gameOverObject)
+        {
+            gameOver = gameOverObject.GetComponent<GameOverScript>();
+        }
+        if(!gameOverObject)
+        {
+            Debug.Log("No game over found");
+        }
 	}
 	
 	// Update is called once per frame
@@ -36,22 +48,31 @@ public class Health : MonoBehaviour
     void OnCollisionEnter2D(Collision2D coll)
     {
         //check collision for objects that collide with player
-        if (coll.gameObject.tag == "death" || coll.gameObject.tag == "obstacletag")
+        if (coll.gameObject.tag == "death" || coll.gameObject.tag == "obstacletag" || coll.gameObject.tag == "damage")
         {
             if (coll.gameObject.tag == "obstacletag")   //destroy player regardless of health if collision with obstacle
             {
-                Destroy(gameObject);
+                currentHealth = 0;
+                //Destroy(gameObject);
             }
-            else
+            else if (coll.gameObject.tag == "death")
+            {
+                TakeDamage(coll.gameObject.GetComponent<BulletDamage>().Damage);
+            }
+            else if(coll.gameObject.tag == "damage")
+            {
                 TakeDamage(5);
+            }
         }
     }
 
     void OnDeath()
     {
         trail.transform.SetParent(null); //seperate trail from parent player object
+        gameOver.b_isDead();
         Destroy(gameObject); // destroy player
-
-        SceneManager.LoadScene("MainMenu");
+        
+        
+        //SceneManager.LoadScene("MainMenu");
     }
 }
