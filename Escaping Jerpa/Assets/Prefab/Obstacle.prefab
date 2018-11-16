@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114433717411789098}
   - component: {fileID: 95831782328000292}
   - component: {fileID: 114629396168896404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Obstacle
   m_TagString: obstacletag
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1861032755499662}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -131,7 +131,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -203,23 +203,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36696a0696c69784fb1ad924e09b7f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthKitPoint: {fileID: 4563319272540838}
-  healthKit: {fileID: 1930612600898648, guid: a0b0740d1d2f4d94d841be9fd9f0a7ed, type: 2}
-  position: {x: 0, y: 0}
+  healthKitPoint: {fileID: 4987607762720726}
+  healthKit: {fileID: 1154722782206206, guid: dcf4ef51c91d8c447be5d273c5e8dc7a, type: 2}
+  position: {x: 0, y: 0, z: 0}
 --- !u!114 &114872543561927204
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1861032755499662}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36696a0696c69784fb1ad924e09b7f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healthKitPoint: {fileID: 4563319272540838}
   healthKit: {fileID: 1154722782206206, guid: dcf4ef51c91d8c447be5d273c5e8dc7a, type: 2}
-  position: {x: 0, y: 0}
+  position: {x: 0, y: 0, z: 0}
 --- !u!212 &212829098627053800
 SpriteRenderer:
   m_ObjectHideFlags: 1
