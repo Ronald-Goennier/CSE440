@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212497566751102198}
   - component: {fileID: 61098136997239544}
   - component: {fileID: 114154073886447418}
+  - component: {fileID: 114387990906800346}
   m_Layer: 10
   m_Name: EnemyBullet
   m_TagString: death
@@ -80,6 +81,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 16
   destroyBulletTime: 2.75
+--- !u!114 &114387990906800346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1460784874583584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b313acefc1ae8a4b9fd761866db21d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!212 &212497566751102198
 SpriteRenderer:
   m_ObjectHideFlags: 1

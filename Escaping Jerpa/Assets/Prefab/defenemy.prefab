@@ -633,8 +633,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a798077c5ef5534ea9f78815596a091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   enemyFirepoint: {fileID: 4338796975211252}
   enemyBulletPrefab: {fileID: 1460784874583584, guid: 4801ef3f30cbd964aac4725a09fdac54,
+=======
+  enemyFirepoint: {fileID: 4037038401158738}
+  enemyBulletPrefab: {fileID: 1292068048926776, guid: e111261b0936c8b418c2fab2f65c1d8e,
+>>>>>>> 38fa50236a2736686a8fee59514654f598f350ed
     type: 2}
   enemyShootingRate: 1
 --- !u!114 &114818256668819266
@@ -648,9 +653,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cccbca889735c54a9b856ea2d689742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   movementSpeed: 7
   defcopanim: {fileID: 95047961049525996}
 --- !u!212 &212843145626203070
+=======
+  destroyanim: {fileID: 95171114605435140}
+  scorePoints: 5
+--- !u!212 &212151684315756576
+>>>>>>> 38fa50236a2736686a8fee59514654f598f350ed
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
