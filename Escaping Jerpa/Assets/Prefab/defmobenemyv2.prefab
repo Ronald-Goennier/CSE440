@@ -53,7 +53,6 @@ GameObject:
   - component: {fileID: 212028023967263180}
   - component: {fileID: 114680364287228066}
   - component: {fileID: 61304897904324604}
-  - component: {fileID: 114292972687706076}
   - component: {fileID: 114431958941481820}
   - component: {fileID: 95736139923399136}
   - component: {fileID: 114374658191493336}
@@ -241,18 +240,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.05
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &114292972687706076
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1677809877629180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d0bbf8c50c57f4081336d177af2ac3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyanim: {fileID: 95736139923399136}
 --- !u!114 &114374658191493336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,6 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyanim: {fileID: 95736139923399136}
+  health: 10
 --- !u!114 &114431958941481820
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,8 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8263cb778b4f614889108e984fda930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
-  targetPlayer: {fileID: 0}
+  movementSpeed: 3.5
 --- !u!212 &212028023967263180
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -19,7 +19,7 @@ public class ObstacleSpawning : MonoBehaviour {
 
         if(spawning_timer <= 0)
         {
-            random_position = new Vector3(11, (Random.Range(-5.0f, 5.0f)), 0);  //create vector at random x,y position
+            random_position = new Vector3(transform.position.x, (Random.Range(-5.0f, 5.0f)), 0);  //create vector at random x,y position
             Instantiate(obstaclePrefab, random_position, obstaclePoint.rotation);   //create object at specified vector
             spawning_timer = Random.Range(5f,20f);  //wait a random amount of time for next obstacle creation
         }

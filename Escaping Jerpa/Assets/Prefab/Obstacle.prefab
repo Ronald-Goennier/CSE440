@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyanim: {fileID: 0}
+  health: 10
 --- !u!212 &212829098627053800
 SpriteRenderer:
   m_ObjectHideFlags: 1

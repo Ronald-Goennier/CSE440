@@ -23,7 +23,7 @@ public class sampleSine : MonoBehaviour {
     {
 
         rb = gameObject.GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 8f);
 
     }    // Update is called once per frame
 
@@ -38,7 +38,7 @@ public class sampleSine : MonoBehaviour {
     void Strafing()
     {
         translateX = sine2 * Mathf.Sin(counter/2);
-
+        //transform.position = new Vector3(transform.position.x, translateX);
         rb.transform.Translate(0, translateX, 0);
     }
 
