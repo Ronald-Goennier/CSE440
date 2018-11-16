@@ -19,4 +19,9 @@ public class HealthKitMovement : MonoBehaviour {
     {
         transform.position += Vector3.left * movementSpeed * Time.deltaTime;   	
 	}
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        Destroy(gameObject);
+    }
 }
