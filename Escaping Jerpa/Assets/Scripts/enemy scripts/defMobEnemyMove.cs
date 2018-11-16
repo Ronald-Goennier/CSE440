@@ -7,12 +7,12 @@ public class defMobEnemyMove : MonoBehaviour
 
     [SerializeField]
     private float movementSpeed;    //enemy movement speed when spawned
-    [SerializeField]
+    
     private Transform targetPlayer;
 
     private float firstmovetime;    //amount of time enemy moves when first spawned
     private float stationaryTime;   //amount of time enemy is stationary after firstmovetime reaches 0
-    private float upordown;         //whether enemy moves up or down offscreen 
+    private int upordown;         //whether enemy moves up or down offscreen 
 
     //[SerializeField]
     //private Animator defcopanim;
@@ -23,10 +23,10 @@ public class defMobEnemyMove : MonoBehaviour
     {
         targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
         //set timers
-        firstmovetime = Random.Range(0.75f, 1.25f);
-        stationaryTime = Random.Range(3f, 8f);
+        firstmovetime = Random.Range(1f, 1.5f);
+        stationaryTime = Random.Range(4f, 10f);
         //set number to see whether enemy moves up or down
-        upordown = Random.Range(0f, 2f);
+        upordown = Random.Range(0, 3);
 
     }
 
@@ -45,7 +45,7 @@ public class defMobEnemyMove : MonoBehaviour
             stationaryTime -= Time.deltaTime;
             if (stationaryTime > 0)
             {
-                //transform.position = new Vector3(transform.position.x, targetPlayer.position.y, transform.position.z);
+                //enemy follows player's y axis only
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, targetPlayer.position.y), 4f * Time.deltaTime);
             }
             //enemy stays stationary until stationaryTime is 0 or less than 0
@@ -56,12 +56,10 @@ public class defMobEnemyMove : MonoBehaviour
                 //if upordown is greater than 0, enemy moves down offscreen, else enemy moves up offscreen
                 if (upordown > 1)
                 {
-                    awaymovingdown();
-                    //defcopanim.SetFloat("MoveOption", upordown);
+                    awaymovingdown(); 
                 }
                 else
-                {
-                    //defcopanim.SetFloat("MoveOption", upordown);
+                {                   
                     awaymovingup();
                 }
             }
@@ -78,7 +76,6 @@ public class defMobEnemyMove : MonoBehaviour
     //enemy moves down offscreen
     void awaymovingdown()
     {
-        //defcopanim.SetFloat("MoveOption", upordown);
         transform.position += Vector3.up * movementSpeed * Time.deltaTime;
         transform.position += Vector3.left * movementSpeed * Time.deltaTime;
         Destroy(gameObject, 4f);
@@ -87,7 +84,6 @@ public class defMobEnemyMove : MonoBehaviour
     //enemy moves up offscreen
     void awaymovingup()
     {
-        //defcopanim.SetFloat("MoveOption", upordown);
         transform.position += Vector3.down * movementSpeed * Time.deltaTime;
         transform.position += Vector3.left * movementSpeed * Time.deltaTime;
         Destroy(gameObject, 3f);

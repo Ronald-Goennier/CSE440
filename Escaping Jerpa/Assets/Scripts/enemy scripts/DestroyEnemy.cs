@@ -11,7 +11,17 @@ public class DestroyEnemy : MonoBehaviour {
     private ScoreScript scoreController;
     private GameObject scoreControllerObject;
 
+    [SerializeField]
+    private int health = 10;
+
+    private int currentHealth;
+
     void Start()
+
+    {      
+        destroyanim.SetBool("isdestroy", false);
+        currentHealth = health;
+
     {   
         destroyanim.SetBool("isdestroy", false);
         scoreControllerObject = GameObject.FindGameObjectWithTag("ScoreController");
@@ -24,16 +34,29 @@ public class DestroyEnemy : MonoBehaviour {
             Debug.Log("No score script found");
         }
         
+
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
         //destroy enemy if it collides with objects tagged "bulletcollide"
         if (coll.gameObject.tag == "bulletcollide")
         {
+
             if (scoreControllerObject)
             {
                 scoreController.AddScore(scorePoints);
             }
+
+            currentHealth -= 5;
+            if (currentHealth <= 0)
+            {
+                GetComponent<Collider2D>().enabled = false;
+                destroyanim.SetBool("isdestroy", true);
+                StartCoroutine(time());
+            }
+
+            scoreController.AddScore(scorePoints);
+
             GetComponent<Collider2D>().enabled = false;
             if (destroyanim)
             {
@@ -41,6 +64,7 @@ public class DestroyEnemy : MonoBehaviour {
 
             }
             StartCoroutine(time());
+
         }
     }
 
