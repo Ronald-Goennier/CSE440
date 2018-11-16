@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// Controlls the Pause Menu to freeze the game when p is pressed or pressed again
+/// </summary>
 public class PauseMenu : MonoBehaviour
 {
     private GameObject[] pauseObjects;

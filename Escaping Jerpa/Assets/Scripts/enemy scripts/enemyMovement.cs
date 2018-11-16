@@ -17,8 +17,8 @@ public class enemyMovement1 : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //set timers
-        firstmovetime = Random.Range(1f, 1.5f);
-        stationaryTime = Random.Range(4f, 6f);
+        firstmovetime = Random.Range(2f, 3.5f);
+        stationaryTime = Random.Range(5f, 8f);
         //set number to see whether enemy moves up or down
         upordown = Random.Range(0f, 2f);
     }

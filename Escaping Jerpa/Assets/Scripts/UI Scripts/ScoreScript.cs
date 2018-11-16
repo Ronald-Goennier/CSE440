@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Controls how to keep score for the entire game
+/// </summary>
 public class ScoreScript : MonoBehaviour
 {
     public int scoreKeeper;
@@ -23,6 +25,15 @@ public class ScoreScript : MonoBehaviour
     public void AddScore(int scorePoints)
     {
         scoreKeeper += scorePoints;
+        if(scoreKeeper >= 100)
+        {
+            scoreKeeper += scorePoints;
+        }
+        UpdateScore();
+    }
+
+    private void Update()
+    {
         UpdateScore();
     }
 
