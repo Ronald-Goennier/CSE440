@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// Creates a Game Over screen that freezes the game and shows the buttons
+/// </summary>
 public class GameOverScript : MonoBehaviour
 {
     private GameObject[] gameOverObjects;

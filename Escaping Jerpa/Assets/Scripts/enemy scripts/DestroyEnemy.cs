@@ -9,11 +9,12 @@ public class DestroyEnemy : MonoBehaviour {
     public int scorePoints;
 
     private ScoreScript scoreController;
+    private GameObject scoreControllerObject;
 
     void Start()
     {   
         destroyanim.SetBool("isdestroy", false);
-        GameObject scoreControllerObject = GameObject.FindGameObjectWithTag("ScoreController");
+        scoreControllerObject = GameObject.FindGameObjectWithTag("ScoreController");
         if(scoreControllerObject)
         {
             scoreController = scoreControllerObject.GetComponent<ScoreScript>();
@@ -29,9 +30,16 @@ public class DestroyEnemy : MonoBehaviour {
         //destroy enemy if it collides with objects tagged "bulletcollide"
         if (coll.gameObject.tag == "bulletcollide")
         {
-            scoreController.AddScore(scorePoints);
+            if (scoreControllerObject)
+            {
+                scoreController.AddScore(scorePoints);
+            }
             GetComponent<Collider2D>().enabled = false;
-            destroyanim.SetBool("isdestroy",true);
+            if (destroyanim)
+            {
+                destroyanim.SetBool("isdestroy", true);
+
+            }
             StartCoroutine(time());
         }
     }

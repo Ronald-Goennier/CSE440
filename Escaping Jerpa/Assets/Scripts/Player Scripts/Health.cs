@@ -16,6 +16,7 @@ public class Health : MonoBehaviour
     private bool stunned;
     private GameOverScript gameOver;
 
+
 	// Use this for initialization
 	void Start ()
     {
@@ -32,7 +33,7 @@ public class Health : MonoBehaviour
         {
             Debug.Log("No game over found");
         }
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -44,13 +45,7 @@ public class Health : MonoBehaviour
 
         if (stunned)
         {
-            time -= Time.deltaTime;
-            if (time <= 0)
-            {
-                GetComponent<PCmovement>().enabled = true;
-                time = 3;
-            }
-
+            Stunned();
         }
     }
 
@@ -107,5 +102,15 @@ public class Health : MonoBehaviour
         
         
         //SceneManager.LoadScene("MainMenu");
+    }
+
+    void Stunned()
+    {
+        time -= Time.deltaTime;
+        if (time <= 0)
+        {
+            GetComponent<PCmovement>().enabled = true;
+            time = 3;
+        }
     }
 }
