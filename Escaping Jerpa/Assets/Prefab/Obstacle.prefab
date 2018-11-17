@@ -135,9 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyanim: {fileID: 0}
-<<<<<<< HEAD
-  health: 10
-=======
 --- !u!114 &114846030469804320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -152,7 +149,6 @@ MonoBehaviour:
   healthkitPoint: {fileID: 4563319272540838}
   healthKit: {fileID: 1154722782206206, guid: dcf4ef51c91d8c447be5d273c5e8dc7a, type: 2}
   position: {x: 0, y: 0, z: 0}
->>>>>>> 38fa50236a2736686a8fee59514654f598f350ed
 --- !u!212 &212829098627053800
 SpriteRenderer:
   m_ObjectHideFlags: 1

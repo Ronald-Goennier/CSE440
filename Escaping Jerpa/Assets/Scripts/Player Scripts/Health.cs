@@ -12,32 +12,25 @@ public class Health : MonoBehaviour
     public GameObject trail;
     [SerializeField]
     private float time;
-<<<<<<< HEAD
-    private bool stunned;
-=======
 
     private bool stunned;
     private GameOverScript gameOver;
->>>>>>> 38fa50236a2736686a8fee59514654f598f350ed
 
-<<<<<<< HEAD
 
-	// Use this for initialization
-	void Start ()
-=======
+
+
     // Use this for initialization
     void Start()
->>>>>>> c7a625dfaf804a5defced6bd84fb017a6381768a
+
     {
         healthSlider.value = maxHealth;
         currentHealth = maxHealth;
         stunned = false;
-<<<<<<< HEAD
     }
 
     // Update is called once per frame
     void Update()
-=======
+    { 
 
         GameObject gameOverObject = GameObject.FindGameObjectWithTag("GameOverMenu");
         if(gameOverObject)
@@ -48,12 +41,6 @@ public class Health : MonoBehaviour
         {
             Debug.Log("No game over found");
         }
-    }
-	
-	// Update is called once per frame
-	void Update ()
->>>>>>> 38fa50236a2736686a8fee59514654f598f350ed
-    {
         if (currentHealth <= 0)
         {
             OnDeath();
@@ -63,7 +50,9 @@ public class Health : MonoBehaviour
         {
             Stunned();
         }
+
     }
+	
 
     void TakeDamage(int dmg)
     {
@@ -80,28 +69,17 @@ public class Health : MonoBehaviour
     void OnCollisionEnter2D(Collision2D coll)
     {
         //check collision for objects that collide with player
-<<<<<<< HEAD
-        if (coll.gameObject.tag == "death" || coll.gameObject.tag == "obstacletag" || coll.gameObject.tag == "stun")
-=======
         if (coll.gameObject.tag == "death" || coll.gameObject.tag == "obstacletag" || coll.gameObject.tag == "damage" || coll.gameObject.tag == "stun")
->>>>>>> 38fa50236a2736686a8fee59514654f598f350ed
         {
             if (coll.gameObject.tag == "obstacletag")   //destroy player regardless of health if collision with obstacle
             {
                 currentHealth = 0;
-                //Destroy(gameObject);
             }
-<<<<<<< HEAD
             else if (coll.gameObject.tag == "stun")
             {
                 GetComponent<PCmovement>().enabled = false;
                 stunned = true;
             }
-            else
-            {
-                TakeDamage(5);
-            }
-=======
             else if (coll.gameObject.tag == "death")
             {
                 TakeDamage(coll.gameObject.GetComponent<BulletDamage>().Damage);
@@ -110,11 +88,7 @@ public class Health : MonoBehaviour
             {
                 TakeDamage(5);
             }
-            else if (coll.gameObject.tag == "stun")
-            {
-                GetComponent<PCmovement>().enabled = false;
-                stunned = true;
-            }
+
         }
 
         //collision check for medkits
@@ -122,7 +96,6 @@ public class Health : MonoBehaviour
         {
             Destroy(coll.gameObject);
             GiveHealth(5);
->>>>>>> 38fa50236a2736686a8fee59514654f598f350ed
         }
     }
 
@@ -131,11 +104,7 @@ public class Health : MonoBehaviour
         trail.transform.SetParent(null); //seperate trail from parent player object
         gameOver.b_isDead();
         Destroy(gameObject); // destroy player
-        
-        
-        //SceneManager.LoadScene("MainMenu");
     }
-<<<<<<< HEAD
 
     void Stunned()
     {
@@ -147,6 +116,5 @@ public class Health : MonoBehaviour
         }
     }
 }
-=======
-}
->>>>>>> c7a625dfaf804a5defced6bd84fb017a6381768a
+
+

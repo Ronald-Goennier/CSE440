@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyEnemy : MonoBehaviour {
+public class DestroyEnemy : MonoBehaviour
+{
 
     [SerializeField]
     private Animator destroyanim;
@@ -21,8 +22,7 @@ public class DestroyEnemy : MonoBehaviour {
     {      
         destroyanim.SetBool("isdestroy", false);
         currentHealth = health;
-
-    {   
+  
         destroyanim.SetBool("isdestroy", false);
         scoreControllerObject = GameObject.FindGameObjectWithTag("ScoreController");
         if(scoreControllerObject)
