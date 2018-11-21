@@ -134,7 +134,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyanim: {fileID: 0}
+<<<<<<< HEAD:Escaping-Jerpa-master/Escaping-Jerpa-master/Assets/Prefab/Obstacle.prefab
   health: 10
+=======
+--- !u!114 &114846030469804320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1900058022991334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4f95e66241f1fb4d8f56bf510cccbd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthkitPoint: {fileID: 4563319272540838}
+  healthKit: {fileID: 1154722782206206, guid: dcf4ef51c91d8c447be5d273c5e8dc7a, type: 2}
+  position: {x: 0, y: 0, z: 0}
+>>>>>>> b6469468d3fbac3da94a8e4dd95cc5d0e7707155:Escaping Jerpa/Assets/Prefab/Obstacle.prefab
 --- !u!212 &212829098627053800
 SpriteRenderer:
   m_ObjectHideFlags: 1
