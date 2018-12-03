@@ -24,6 +24,10 @@ public class BossWaveFire : MonoBehaviour
 
     private float firingrate = 3;
 
+    public Transform target;
+    private Vector3 v_diff;
+    private float atan2;
+
     // Update is called once per frame
     void Update()
     {
@@ -32,11 +36,18 @@ public class BossWaveFire : MonoBehaviour
         if (firingrate <= 0)
         {
             firingAnimTimer -= Time.deltaTime;
+
+            v_diff = (target.position - transform.position);
+            atan2 = Mathf.Atan2(v_diff.x, v_diff.y);
+            transform.rotation = Quaternion.Euler(0f, 0f, -atan2 * Mathf.Rad2Deg);
+
             if (firingAnimTimer <= 0)
             //StartCoroutine(time());
             {
+
+
                 Instantiate(BossWavePrefab, FirePoint.position, FirePoint.rotation);   //spawn enemy bullet
-                Instantiate(BossWavePrefab2, new Vector2(FirePoint.position.x, FirePoint.position.y + 3), FirePoint.rotation);   //spawn enemy bullet
+                Instantiate(BossWavePrefab2, new Vector2(FirePoint.position.x, FirePoint.position.y + 1), FirePoint.rotation);   //spawn enemy bullet
                 firingrate = Random.Range(shootRate1, shootRate2);   //random time cooldown for when enemy can shoot again
                
                 firingAnimTimer = .7f;

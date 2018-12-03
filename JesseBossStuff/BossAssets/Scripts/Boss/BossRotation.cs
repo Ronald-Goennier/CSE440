@@ -26,11 +26,11 @@ public class BossRotation : MonoBehaviour {
         transform.rotation = Quaternion.Euler(0f, 0f, -atan2 * Mathf.Rad2Deg);
 
         //Restrict rotations
-        float minRotation = 80;
-        float maxRotation = 100;
+        //float minRotation = 80;
+        //float maxRotation = 100;
 
-        Vector3 currentRotation = transform.localRotation.eulerAngles;
-        currentRotation.z = Mathf.Clamp(currentRotation.z, minRotation, maxRotation);
-        transform.localRotation = Quaternion.Euler(currentRotation);
+        //Vector3 currentRotation = transform.localRotation.eulerAngles;
+        //currentRotation.z = Mathf.Clamp(currentRotation.z, minRotation, maxRotation);
+        //transform.localRotation = Quaternion.Euler(currentRotation);
     }
 }

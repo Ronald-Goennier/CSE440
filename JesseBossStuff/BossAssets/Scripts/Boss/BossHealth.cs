@@ -92,18 +92,16 @@ public class BossHealth : MonoBehaviour
         if (currentHealth <= 50 && currentHealth >= 25)
         {
             GetComponent<BossSpreadShooting>().enabled = false;
-            GetComponent<BossRotation>().enabled = false;
             transform.rotation = Quaternion.Euler(0, 0, 90);
-            //ChildRotation.transform.rotation = Quaternion.Euler(0, 0, 90);
 
+            GetComponent<BossBulletSingle>().enabled = true;
+            GetComponent<BossStunShot>().enabled = true;
             GetComponent<BossWaveFire>().enabled = true;
         }
 
         if (currentHealth <= 25 && currentHealth >= 0)
         {
-            GetComponent<BossSpreadShooting>().enabled = false;
-
-            GetComponent<BossRotation>().enabled = true;
+            GetComponent<BossStunShot>().enabled = true;
             GetComponent<BossWaveFire>().enabled = true;
             GetComponent<BossMovement>().enabled = true;
             GetComponent<BossSpreadShooting>().enabled = true;
