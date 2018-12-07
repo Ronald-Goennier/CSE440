@@ -1,0 +1,231 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1281524276740526}
+  m_IsPrefabAsset: 1
+--- !u!1 &1281524276740526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4060323497700880}
+  - component: {fileID: 331711802416424440}
+  - component: {fileID: 212635261913472728}
+  - component: {fileID: 114730607259724036}
+  - component: {fileID: 114477659286759744}
+  - component: {fileID: 114498314420558348}
+  - component: {fileID: 114489316703112306}
+  - component: {fileID: 114119098213596436}
+  m_Layer: 9
+  m_Name: ObstacleSpawn
+  m_TagString: LevelObject
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4060323497700880
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281524276740526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.01, y: 0.05, z: -3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114119098213596436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281524276740526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fde417eaeaae044e82b66d75867c1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePoint: {fileID: 4060323497700880}
+  obstaclePrefab: {fileID: 1900058022991334, guid: 40b02a7e67abd2e4ab2597997074ffc3,
+    type: 2}
+  spawning_timer: 2
+  random_position: {x: 0, y: 0, z: 0}
+--- !u!114 &114477659286759744
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281524276740526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af71d0ad60a91df4d9863d5020ec45f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePoint: {fileID: 4060323497700880}
+  enemyprefab: {fileID: 1677809877629180, guid: dbeae2f915efc3248a943fa6dcc48bcd,
+    type: 2}
+  spawning_timer: 20
+  randomSpawntimer1: 6
+  randomSpawntimer2: 10
+  randomSpawnPos1: -4
+  randomSpawnPos2: 4
+--- !u!114 &114489316703112306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281524276740526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af71d0ad60a91df4d9863d5020ec45f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePoint: {fileID: 4060323497700880}
+  enemyprefab: {fileID: 1963785191964620, guid: b6f99405981ca2e42b9a051c307ad8ca,
+    type: 2}
+  spawning_timer: 40
+  randomSpawntimer1: 10
+  randomSpawntimer2: 15
+  randomSpawnPos1: -2
+  randomSpawnPos2: 2
+--- !u!114 &114498314420558348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281524276740526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af71d0ad60a91df4d9863d5020ec45f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePoint: {fileID: 4060323497700880}
+  enemyprefab: {fileID: 1133809245794984, guid: d8d8e029b765c1845a2f0960f2ffb557,
+    type: 2}
+  spawning_timer: 2
+  randomSpawntimer1: 3
+  randomSpawntimer2: 5
+  randomSpawnPos1: -5
+  randomSpawnPos2: 5
+--- !u!114 &114730607259724036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281524276740526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af71d0ad60a91df4d9863d5020ec45f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePoint: {fileID: 4060323497700880}
+  enemyprefab: {fileID: 1263252101447188, guid: 72639d38d9208fa4fb32d46f19cd4781,
+    type: 2}
+  spawning_timer: 60
+  randomSpawntimer1: 10
+  randomSpawntimer2: 20
+  randomSpawnPos1: -4
+  randomSpawnPos2: -1
+--- !u!212 &212635261913472728
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281524276740526}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: b6b24aeea339b8b4a940cc624ca25941, type: 3}
+  m_Color: {r: 1, g: 0.078431375, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!331 &331711802416424440
+SpriteMask:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281524276740526}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b6b24aeea339b8b4a940cc624ca25941, type: 3}
+  m_MaskAlphaCutoff: 0.127
+  m_FrontSortingLayerID: 0
+  m_BackSortingLayerID: 0
+  m_FrontSortingLayer: 0
+  m_BackSortingLayer: 0
+  m_FrontSortingOrder: 0
+  m_BackSortingOrder: 0
+  m_IsCustomRangeActive: 0
+  m_SpriteSortPoint: 0
