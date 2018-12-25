@@ -304,13 +304,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "In a not so far off\n\nfuture, in the year of \n\n2030, evil and seedy
-    \n\ncorporations, like Amazon and \n\nTesla, the world is \n\ncontrolled by three
-    crime \n\nfamilies, the Bezoians, \n\nthe Muskians, and the JERPA. \n\nYou are
-    an enforcer of the \n\nJERPA crime family, and you have \n\nfound that you can
-    no longer \n\nstand the way thing are done, \n\nso you have decided to \n\nEscape
-    JERPA, \n\nbut you know it will be hard, \n\nbecuase JERPA is \n\n\n\nblood in
-    ... blood out."
+  m_Text: "The year is 2035.\r\n\r\nSociety has been taken over by a\ncartel of ruthless,
+    faceless \ncorporations, God Emperor Musk\noverseeing all.  \n\nA seedy underground
+    \neconomy rules the streets. \n\nThe haves live in fully-automated space luxury,
+    the have-nots scrape to survive.\r\n\r\nYou are an enforcer for the JERPA Crime
+    Family, headed by Boss Erjpa.  You are one of the best in the Family.\r\n\r\nYou
+    decided you want to leave.\r\n\r\nBut JERPA is blood in\u2026blood out.\r\n\r\nThe
+    time to run is now\u2026\r\n"
 --- !u!222 &645189043
 CanvasRenderer:
   m_ObjectHideFlags: 0

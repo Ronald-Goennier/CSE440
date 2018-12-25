@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114310857942084196}
   m_Layer: 0
   m_Name: defMobv2
-  m_TagString: Untagged
+  m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -67,7 +67,7 @@ public class EnemyAudioManager : MonoBehaviour
                     Destroy(soundObject, source.clip.length);
                     break;
                 case "Wave":
-                    source.clip = audioClips[15];
+                    source.clip = audioClips[14];
                     source.outputAudioMixerGroup = audioGroups;
                     source.Play();
                     Destroy(soundObject, source.clip.length);

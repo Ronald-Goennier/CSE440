@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114973161757202574}
   m_Layer: 0
   m_Name: Mech_Enemy_Small
-  m_TagString: Untagged
+  m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyanim: {fileID: 95124170782612750}
   health: 30
+  spawn: 0
   score: 0
 --- !u!114 &114528120901654286
 MonoBehaviour:

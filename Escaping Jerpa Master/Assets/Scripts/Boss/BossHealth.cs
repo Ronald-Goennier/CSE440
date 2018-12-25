@@ -12,9 +12,15 @@ public class BossHealth : MonoBehaviour
     [SerializeField]
     private GameObject ChildRotation;
 
+    private GameContolScript gcScript;
+
     public int health = 500;
 
     private int currentHealth;
+
+    [SerializeField]
+    private int Damage = 10;
+
 
     //public Slider  BossHealthSlider;
 
@@ -22,55 +28,32 @@ public class BossHealth : MonoBehaviour
     {
         //destroyanim.SetBool("isdestroy", false);
         currentHealth = health;
-
+        GameObject gameControll = GameObject.FindGameObjectWithTag("GameController");
+        if(gameControll)
+        {
+            gcScript = gameControll.GetComponent<GameContolScript>();
+        }
+        else
+        {
+            Debug.Log("No Game Controller");
+        }
         //BossHealthSlider = GetComponent < Slider> ();
         //BossHealthSlider.value = health;
     }
-
-    /*public int Health
-    {
-        get { return health; }
-        set
-        {
-            health -= value;
-            if (currentHealth >= 75)
-            {
-                GetComponent<BossBulletSingle>().enabled = true;
-
-                if (currentHealth <= 75 && currentHealth >= 50)
-                {
-                    GetComponent<BossBulletSingle>().enabled = false;
-
-                    GetComponent<BossMovement>().enabled = true;
-                    GetComponent<BossSpreadShooting>().enabled = true;
-
-                    if (currentHealth <= 50 && currentHealth >= 25)
-                    {
-
-                        if (currentHealth <= 25 && currentHealth >= 0)
-                        {
-
-
-                        }
-                    }
-                }
-
-            }
-        }
-    }*/
 
     void OnCollisionEnter2D(Collision2D coll)
     {
         //destroy enemy if it collides with objects tagged "bulletcollide"
         if (coll.gameObject.tag == "bulletcollide")
         {
-            currentHealth -= 5;
+            currentHealth -= Damage;
 
             //BossHealthSlider.value = currentHealth;
 
             if (currentHealth <= 0)
             {
                 EnemyAudioManager.instance.Play("Enemy", "Death", gameObject);
+                gcScript.EndGame();
                 GetComponent<Collider2D>().enabled = false;
                 //destroyanim.SetBool("isdestroy", true);
                 StartCoroutine(time());

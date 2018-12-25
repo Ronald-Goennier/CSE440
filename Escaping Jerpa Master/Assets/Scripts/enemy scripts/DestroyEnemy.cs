@@ -42,14 +42,6 @@ public class DestroyEnemy : MonoBehaviour {
             currentHealth -= 5;
             if (currentHealth <= 0)
             {
-                EnemyAudioManager.instance.Play("Enemy", "Death", gameObject);
-                GetComponent<Collider2D>().enabled = false;
-                destroyanim.SetBool("isdestroy", true);
-                StartCoroutine(time());
-                if(spawn)
-                {
-                    GetComponent<SpawnOnShoot>().Spawn();
-                }
                 EnemyScore();
             }
         }
@@ -64,6 +56,14 @@ public class DestroyEnemy : MonoBehaviour {
 
     public void EnemyScore()
     {
+        EnemyAudioManager.instance.Play("Enemy", "Death", gameObject);
+        GetComponent<Collider2D>().enabled = false;
+        destroyanim.SetBool("isdestroy", true);
+        StartCoroutine(time());
+        if (spawn)
+        {
+            GetComponent<SpawnOnShoot>().Spawn();
+        }
         scoreController.AddScore(score);
     }
     

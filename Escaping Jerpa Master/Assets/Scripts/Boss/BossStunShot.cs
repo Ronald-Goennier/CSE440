@@ -30,7 +30,7 @@ public class BossStunShot : MonoBehaviour
             //Quaternion bulletAngle1 = transform.rotation;
             //bulletAngle1.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z + 15.0f);
 
-            Instantiate(BossStunPreFab, FirePoint.position, transform.rotation);
+            Instantiate(BossStunPreFab, FirePoint.position, FirePoint.rotation);
             enemyShootingRate = Random.Range(2f, 4f);   //random time cooldown for when enemy can shoot again
         }
 

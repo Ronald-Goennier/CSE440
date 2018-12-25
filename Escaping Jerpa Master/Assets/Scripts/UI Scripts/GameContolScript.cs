@@ -18,6 +18,9 @@ public class GameContolScript : MonoBehaviour
     public GameObject bikers;
     public GameObject factory;
     private float endTime = 5;
+    private bool deadBoss = false;
+    private bool boss1Life = false, boss2Life = false;
+    private bool obstcales = true, objects = true;
 
 
 	// Use this for initialization
@@ -45,25 +48,48 @@ public class GameContolScript : MonoBehaviour
 	void Update ()
     {
         levelTimer -= Time.deltaTime;
-        if(levelTimer <= 0)
+        if (levelTimer <= 0)
         {
-            obstacleObject.gameObject.SetActive(false);
-            backgroundObject.gameObject.SetActive(false);
-            bikers.SetActive(false);
-            factory.SetActive(true);
+            if (obstcales && objects)
+            { 
+                obstacleObject.SetActive(false);
+                obstcales = false;
+                backgroundObject.SetActive(false);
+                objects = false;
+                bikers.SetActive(false);
+                Debug.Log("No more Enemies");
+                factory.SetActive(true);
+            }
 
             bossSetTimer -= Time.deltaTime;
-            if(bossSetTimer <= 0)
+            if(bossSetTimer <= 0 && !boss1Life && !boss2Life)
             {
                 boss1.SetActive(true);
                 boss2.SetActive(true);
+
+                boss1Life = true;
+                boss2Life = true;
             }
-            if(boss2.GetComponent<BossHealth>().health <= 0)
+            /*if(boss2.GetComponent<BossHealth>().health <= 0)
             {
                 endTime -= Time.deltaTime;
                 if(endTime == 0)
                     SceneManager.LoadScene("OutroText");
-            }
+            }*/
         }
-	}
+
+
+        if (deadBoss)
+        {
+            Debug.Log("Game Over Boss Dead");
+            endTime -= Time.deltaTime;
+            if (endTime <= 0)
+                SceneManager.LoadScene("OutroText");
+        }
+    }
+
+    public void EndGame()
+    {
+        deadBoss = true;
+    }
 }

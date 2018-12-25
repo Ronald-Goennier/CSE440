@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 114860676674432812}
   m_Layer: 0
   m_Name: waveCop
-  m_TagString: Untagged
+  m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,6 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyanim: {fileID: 95853140927868610}
   health: 20
+  spawn: 0
   score: 10
 --- !u!114 &114832733301727008
 MonoBehaviour:

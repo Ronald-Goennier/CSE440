@@ -31,14 +31,14 @@ public class BombController : MonoBehaviour {
 
     void OnCollisionEnter2D (Collision2D coll)
     {
-        if (coll.gameObject.tag == "enemy")
+        if (coll.gameObject.tag == "death")
         {
-            enemies = GameObject.FindGameObjectsWithTag("enemy");
+            enemies = GameObject.FindGameObjectsWithTag("death");
         }
         foreach (GameObject enemy in enemies)
         {
             ScorePoints(enemy);
-            Destroy(enemy);
+            //Destroy(enemy);
         }
         Destroy(gameObject);
     }

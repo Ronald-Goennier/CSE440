@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114859643833887838}
   m_Layer: 0
   m_Name: defMobv2
-  m_TagString: Untagged
+  m_TagString: death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,6 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyanim: {fileID: 95736139923399136}
   health: 10
+  spawn: 0
   score: 10
 --- !u!114 &114431958941481820
 MonoBehaviour:
